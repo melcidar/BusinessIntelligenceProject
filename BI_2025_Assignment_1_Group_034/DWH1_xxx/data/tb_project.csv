@@ -1,0 +1,7 @@
+id,project_name,budget,goal,sponsor,start_date,end_date
+1001,Go Green!,500000,Improve air quality by 20%,gov,2025-10-21,2030-10-21
+1002,Clean Alternative,250000,Replace old sensors,nongov,2019-08-30,2020-01-30
+1003,Breath Again,275000,Integrate sensors for air polution,gov and nongov,2015-07-15,2016-01-15
+1004,InHale!,400000,Collect air quality data,gov and nongov,2023-04-03,2030-04-03
+1005,ExPo Air,350000,Study air quality in industrial zones,gov,2020-01-20,2023-01-20
+1006,Full Lungs,265000,Integrate readings across country,nongov,2016-03-15,2016-08-15
