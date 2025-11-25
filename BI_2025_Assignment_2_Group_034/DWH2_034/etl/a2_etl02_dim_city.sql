@@ -4,7 +4,7 @@
 -- Then, at the END, a separate UPDATE will set region_name via CASE
 
 -- Make A2 dwh2_xxx, stg2_xxx schemas the default for this session
-SET search_path TO dwh2_xxx, stg2_xxx;
+SET search_path TO dwh2_034, stg2_034;
 
 -- =======================================
 -- Load dim_city
