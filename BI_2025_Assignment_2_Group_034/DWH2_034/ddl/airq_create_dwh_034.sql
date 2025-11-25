@@ -1,5 +1,5 @@
 -- Make the A2's dwh2_xxx schema the default for this session
-SET search_path TO dwh2_xxx;
+SET search_path TO dwh2_034;
 
 -- Create schema
 -- CREATE SCHEMA IF NOT EXISTS dwh2_xxx;
@@ -7,11 +7,11 @@ SET search_path TO dwh2_xxx;
 -- -------------------------------
 -- 2) DROP TABLE before attempting to create Star Schema tables, drop in dependency order (fact first)
 -- -------------------------------
-DROP TABLE IF EXISTS dwh2_xxx.ft_param_city_month CASCADE;
-DROP TABLE IF EXISTS dwh2_xxx.dim_alertpeak CASCADE;
-DROP TABLE IF EXISTS dwh2_xxx.dim_param CASCADE;
-DROP TABLE IF EXISTS dwh2_xxx.dim_city CASCADE;
-DROP TABLE IF EXISTS dwh2_xxx.dim_timemonth CASCADE;
+DROP TABLE IF EXISTS dwh2_034.ft_param_city_month CASCADE;
+DROP TABLE IF EXISTS dwh2_034.dim_alertpeak CASCADE;
+DROP TABLE IF EXISTS dwh2_034.dim_param CASCADE;
+DROP TABLE IF EXISTS dwh2_034.dim_city CASCADE;
+DROP TABLE IF EXISTS dwh2_034.dim_timemonth CASCADE;
 
 
 -- =========================
