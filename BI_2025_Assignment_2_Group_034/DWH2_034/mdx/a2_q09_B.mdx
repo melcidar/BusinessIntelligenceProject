@@ -1,19 +1,24 @@
 WITH SET Top10 AS
-  TOPCOUNT(
-    NONEMPTY(
-      [dim_city].[Geo].[country_name].Members,
-      [Measures].[Reading Events]
-    ),
-    10,
-    [Measures].[Reading Events]
-  )
+TOPCOUNT(
+NONEMPTY(
+[dim_city].[Geo].[country_name].Members,
+[Measures].[Reading Events]
+),
+10,
+[Measures].[Reading Events]
+)
+
 SELECT
-  {
-    [dim_timemonth].[Time].[quarter_num].&[1],
-    [dim_timemonth].[Time].[quarter_num].&[2],
-    [dim_timemonth].[Time].[quarter_num].&[3],
-    [dim_timemonth].[Time].[quarter_num].&[4]
-  } * { [Measures].[Reading Events] } ON COLUMNS,
-  Top10 ON ROWS
+{
+FILTER(
+[dim_timemonth].[Time].[quarter_num].Members,
+[dim_timemonth].[Time].CurrentMember.Parent = [dim_timemonth].[Time].[year_num].&[2024]
+)
+}
+
+- { [Measures].[Reading Events] }
+  ON COLUMNS,
+
+Top10 ON ROWS
+
 FROM [AirQ Cube]
-WHERE ([dim_timemonth].[Time].[year_num].&[2024]);

@@ -1,15 +1,20 @@
-SELECT 
-  {
-    [dim_timemonth].[Time].[quarter_num].&[1],
-    [dim_timemonth].[Time].[quarter_num].&[2],
-    [dim_timemonth].[Time].[quarter_num].&[3],
-    [dim_timemonth].[Time].[quarter_num].&[4]
-  } * { [Measures].[Exceed Days (any)] } ON COLUMNS,
-  {
-    [dim_city].[Geo].[country_name].&[Russia],
-    [dim_city].[Geo].[country_name].&[Turkey],
-    [dim_city].[Geo].[country_name].&[Austria],
-    [dim_city].[Geo].[country_name].&[Germany]
-  } ON ROWS
+SELECT
+{
+FILTER(
+[dim_timemonth].[Time].[quarter_num].Members,
+[dim_timemonth].[Time].CurrentMember.Parent
+= [dim_timemonth].[Time].[year_num].&[2024]
+)
+}
+
+- { [Measures].[Exceed Days (any)] }
+  ON COLUMNS,
+
+{
+[dim_city].[Geo].[country_name].&[Russia],
+[dim_city].[Geo].[country_name].&[Turkey],
+[dim_city].[Geo].[country_name].&[Austria],
+[dim_city].[Geo].[country_name].&[Germany]
+} ON ROWS
+
 FROM [AirQ Cube]
-WHERE ([dim_timemonth].[Time].[year_num].&[2024]);

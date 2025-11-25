@@ -17,4 +17,4 @@ SELECT
   } ON COLUMNS,
   NONEMPTY(CentralEurope, [Measures].[Missing Days]) ON ROWS
 FROM [AirQ Cube]
-WHERE ([dim_timemonth].[Time].[year_num].&[2024]);
+WHERE ([dim_timemonth].[Time].[year_num].&[2024])

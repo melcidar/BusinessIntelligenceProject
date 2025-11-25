@@ -1,0 +1,27 @@
+WITH 
+MEMBER [Measures].[AvgDataQuality2024] AS
+    AVG(
+        {
+            [dim_timemonth].[Time].[year_num].&[2024]
+        },
+        [Measures].[Avg Data Quality]
+    )
+
+SET Top10CityParam AS
+    TOPCOUNT(
+        NONEMPTY(
+            CROSSJOIN(
+                [dim_city].[Geo].[city_name].Members,
+                [dim_param].[Param].[param_name].Members
+            ),
+            [Measures].[AvgDataQuality2024]
+        ),
+        10,
+        [Measures].[AvgDataQuality2024]
+    )
+
+SELECT 
+    [Measures].[AvgDataQuality2024] ON COLUMNS,
+    Top10CityParam ON ROWS
+
+FROM [AirQ Cube]

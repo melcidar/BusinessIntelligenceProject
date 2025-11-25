@@ -1,0 +1,36 @@
+region_name,country_name,city_name,Exceed Days (any)
+Central Europe,Austria,Graz,2052
+Central Europe,Austria,Vienna,1472
+Central Europe,Austria,Salzburg,996
+Central Europe,Croatia,Zagreb,1452
+Central Europe,Czech Republic,Prague,2004
+Central Europe,Czech Republic,Brno,960
+Central Europe,Germany,Berlin,1908
+Central Europe,Germany,Hamburg,976
+Central Europe,Germany,Stuttgart,964
+Central Europe,Germany,Munich,960
+Central Europe,Germany,Leipzig,476
+Central Europe,Hungary,Budapest,1880
+Central Europe,Poland,Warsaw,1452
+Eastern Europe,Belarus,Minsk,1456
+Eastern Europe,Greece,Athens,492
+Eastern Europe,Russia,Moscow,3448
+Eastern Europe,Russia,St. Petersburg,2016
+Eastern Europe,Russia,Ufa,1912
+Eastern Europe,Russia,Kazan,1504
+Eastern Europe,Serbia,Belgrade,464
+Eastern Europe,Turkey,Istanbul,8964
+Eastern Europe,Turkey,Ankara,2436
+Western Europe,Belgium,Brussels,1448
+Western Europe,Denmark,Copenhagen,544
+Western Europe,Finland,Helsinki,952
+Western Europe,France,Paris,1980
+Western Europe,France,Lyon,980
+Western Europe,France,Marseille,532
+Western Europe,Italy,Rome,1996
+Western Europe,Italy,Milan,996
+Western Europe,Spain,Barcelona,1520
+Western Europe,Sweden,Gothenburg,1496
+Western Europe,Sweden,Stockholm,1476
+Western Europe,United Kingdom,London,2940
+Western Europe,United Kingdom,Edinburgh,1440

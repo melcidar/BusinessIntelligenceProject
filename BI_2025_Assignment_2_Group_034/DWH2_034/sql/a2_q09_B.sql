@@ -25,4 +25,4 @@ SELECT
 FROM agg a
 JOIN totals t USING (country_name)
 GROUP BY a.country_name
-ORDER BY t.total_year DESC;
+ORDER BY SUM(a.re_count) DESC;

@@ -1,0 +1,37 @@
+purpose,category,param_name,region_name,country_name,Avg Recorded Value
+Scientific Study,Biological,FungalSpores,Central Europe,Austria,65.51312626732721
+Scientific Study,Biological,Viruses,Central Europe,Austria,61.12667263878716
+Scientific Study,Biological,Yeasts,Central Europe,Austria,63.974449475606285
+Scientific Study,Heavy Metal,Chromium,Central Europe,Austria,21.19223753611247
+Scientific Study,Particulate matter,BlackCarbon,Central Europe,Austria,66.06536451975505
+Scientific Study,Volatile Organic Compound,Ethylbenzene,Central Europe,Austria,70.59940497080485
+Scientific Study,Biological,FungalSpores,Central Europe,Germany,66.43800379435221
+Scientific Study,Biological,Viruses,Central Europe,Germany,62.21747875213623
+Scientific Study,Biological,Yeasts,Central Europe,Germany,68.45770626068115
+Scientific Study,Heavy Metal,Chromium,Central Europe,Germany,21.583073059717815
+Scientific Study,Particulate matter,BlackCarbon,Central Europe,Germany,62.4336243947347
+Scientific Study,Volatile Organic Compound,Ethylbenzene,Central Europe,Germany,70.59214928944905
+Scientific Study,Biological,FungalSpores,Western Europe,France,63.9890980190701
+Scientific Study,Biological,Viruses,Western Europe,France,58.16786013709174
+Scientific Study,Biological,Yeasts,Western Europe,France,68.15170616573758
+Scientific Study,Heavy Metal,Chromium,Western Europe,France,20.767761760287815
+Scientific Study,Particulate matter,BlackCarbon,Western Europe,France,59.879319508870445
+Scientific Study,Volatile Organic Compound,Ethylbenzene,Western Europe,France,68.96501016616821
+Scientific Study,Biological,FungalSpores,Western Europe,Belgium,63.01094468434652
+Scientific Study,Biological,Viruses,Western Europe,Belgium,56.74141279856364
+Scientific Study,Biological,Yeasts,Western Europe,Belgium,
+Scientific Study,Heavy Metal,Chromium,Western Europe,Belgium,22.919060548146565
+Scientific Study,Particulate matter,BlackCarbon,Western Europe,Belgium,59.703606605529785
+Scientific Study,Volatile Organic Compound,Ethylbenzene,Western Europe,Belgium,
+Scientific Study,Biological,FungalSpores,Western Europe,Netherlands,69.08961804707845
+Scientific Study,Biological,Viruses,Western Europe,Netherlands,64.75047334035237
+Scientific Study,Biological,Yeasts,Western Europe,Netherlands,69.52114899953206
+Scientific Study,Heavy Metal,Chromium,Western Europe,Netherlands,23.30561876296997
+Scientific Study,Particulate matter,BlackCarbon,Western Europe,Netherlands,
+Scientific Study,Volatile Organic Compound,Ethylbenzene,Western Europe,Netherlands,72.20759423573811
+Scientific Study,Biological,FungalSpores,Western Europe,United Kingdom,66.23288822174072
+Scientific Study,Biological,Viruses,Western Europe,United Kingdom,63.032468477884926
+Scientific Study,Biological,Yeasts,Western Europe,United Kingdom,63.592304706573486
+Scientific Study,Heavy Metal,Chromium,Western Europe,United Kingdom,22.48824413617452
+Scientific Study,Particulate matter,BlackCarbon,Western Europe,United Kingdom,63.60103384653727
+Scientific Study,Volatile Organic Compound,Ethylbenzene,Western Europe,United Kingdom,72.31951093673706
