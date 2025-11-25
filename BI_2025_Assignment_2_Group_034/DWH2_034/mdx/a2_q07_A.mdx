@@ -1,0 +1,14 @@
+SELECT
+  {
+    [Measures].[Avg Recorded Value],
+    [Measures].[P95 Recorded Value]
+  } ON COLUMNS,
+  NONEMPTY(
+    [dim_city].[Geo].[country_name].Members,
+    [Measures].[Avg Recorded Value]
+  ) ON ROWS
+FROM [AirQ Cube]
+WHERE (
+  [dim_timemonth].[Time].[year_num].&[2023],
+  [dim_param].[Param].[param_name].&[PM10]
+);

@@ -1,0 +1,24 @@
+WITH SET EastEurope AS
+{
+  [dim_city].[Geo].[country_name].&[Poland],
+  [dim_city].[Geo].[country_name].&[Czechia],
+  [dim_city].[Geo].[country_name].&[Slovakia],
+  [dim_city].[Geo].[country_name].&[Hungary],
+  [dim_city].[Geo].[country_name].&[Romania],
+  [dim_city].[Geo].[country_name].&[Bulgaria],
+  [dim_city].[Geo].[country_name].&[Ukraine],
+  [dim_city].[Geo].[country_name].&[Belarus],
+  [dim_city].[Geo].[country_name].&[Moldova],
+  [dim_city].[Geo].[country_name].&[Russia],
+  [dim_city].[Geo].[country_name].&[Serbia],
+  [dim_city].[Geo].[country_name].&[Bosnia and Herzegovina],
+  [dim_city].[Geo].[country_name].&[Croatia],
+  [dim_city].[Geo].[country_name].&[Slovenia]
+}
+SELECT
+  {
+    ([dim_timemonth].[Time].[year_num].&[2023], [Measures].[Exceed Days (any)]),
+    ([dim_timemonth].[Time].[year_num].&[2024], [Measures].[Exceed Days (any)])
+  } ON COLUMNS,
+  EastEurope ON ROWS
+FROM [AirQ Cube];

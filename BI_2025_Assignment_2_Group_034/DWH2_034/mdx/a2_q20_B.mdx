@@ -1,0 +1,22 @@
+WITH SET WestEurope AS
+{
+  [dim_city].[Geo].[country_name].&[Austria],
+  [dim_city].[Geo].[country_name].&[Germany],
+  [dim_city].[Geo].[country_name].&[France],
+  [dim_city].[Geo].[country_name].&[Belgium],
+  [dim_city].[Geo].[country_name].&[Netherlands],
+  [dim_city].[Geo].[country_name].&[Ireland],
+  [dim_city].[Geo].[country_name].&[United Kingdom]
+}
+SELECT
+  [dim_param].[Param].[param_name].Members *
+  { [Measures].[Avg Recorded Value] } ON COLUMNS,
+  WestEurope ON ROWS
+FROM [AirQ Cube]
+WHERE (
+  [dim_timemonth].[Time].[year_num].&[2024],
+  FILTER(
+    [dim_param].[Param].[param_name].Members,
+    ANCESTOR([dim_param].[Param].CurrentMember, [dim_param].[Param].[purpose]).Name = "Scientific Study"
+  )
+);

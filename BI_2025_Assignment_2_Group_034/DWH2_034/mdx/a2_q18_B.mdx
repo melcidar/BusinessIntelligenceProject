@@ -1,0 +1,15 @@
+SELECT
+  {
+    [dim_timemonth].[Time].[quarter_num].&[1],
+    [dim_timemonth].[Time].[quarter_num].&[2],
+    [dim_timemonth].[Time].[quarter_num].&[3],
+    [dim_timemonth].[Time].[quarter_num].&[4]
+  } * { [Measures].[Reading Events] } ON COLUMNS,
+  {
+    [dim_city].[Geo].[city_name].&[Vienna],
+    [dim_city].[Geo].[city_name].&[Berlin],
+    [dim_city].[Geo].[city_name].&[Moscow],
+    [dim_city].[Geo].[city_name].&[London]
+  } ON ROWS
+FROM [AirQ Cube]
+WHERE ([dim_timemonth].[Time].[year_num].&[2023]);

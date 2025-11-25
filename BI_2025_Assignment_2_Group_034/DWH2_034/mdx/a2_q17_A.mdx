@@ -1,0 +1,8 @@
+SELECT
+  {
+    ([dim_timemonth].[Time].[year_num].&[2023]),
+    ([dim_timemonth].[Time].[year_num].&[2024])
+  } *
+  { [Measures].[Avg Data Quality] } ON COLUMNS,
+  [dim_city].[Geo].[country_name].Members ON ROWS
+FROM [AirQ Cube];

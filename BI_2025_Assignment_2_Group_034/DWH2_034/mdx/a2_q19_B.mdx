@@ -1,0 +1,20 @@
+WITH SET CentralEurope AS
+{
+  [dim_city].[Geo].[country_name].&[Germany],
+  [dim_city].[Geo].[country_name].&[Austria],
+  [dim_city].[Geo].[country_name].&[Switzerland],
+  [dim_city].[Geo].[country_name].&[Poland],
+  [dim_city].[Geo].[country_name].&[Czechia],
+  [dim_city].[Geo].[country_name].&[Slovakia],
+  [dim_city].[Geo].[country_name].&[Hungary],
+  [dim_city].[Geo].[country_name].&[Slovenia],
+  [dim_city].[Geo].[country_name].&[Croatia]
+}
+SELECT
+  {
+    ([Measures].[Missing Days]),
+    ([Measures].[Data Volume (KB)])
+  } ON COLUMNS,
+  NONEMPTY(CentralEurope, [Measures].[Missing Days]) ON ROWS
+FROM [AirQ Cube]
+WHERE ([dim_timemonth].[Time].[year_num].&[2024]);
